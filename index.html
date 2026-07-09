@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>D&amp;S Excavation Inc | Sandpoint &amp; North Idaho Excavation Contractor</title>
   <meta name="description" content="D&amp;S Excavation Inc is a locally owned, licensed, bonded and insured excavation company serving Sandpoint and North Idaho. Excavation, site development, land clearing, utility installation, hauling, roads and driveways." />
-  <meta name="keywords" content="excavation, Sandpoint, North Idaho, site development, land clearing, utility installation, hauling, roads, driveways, septic, foundations, drainage" />
+  <meta name="keywords" content="excavation, Sandpoint, Ponderay, Sagle, Dover, Kootenai, Hope, East Hope, Priest River, Bonners Ferry, Bonner County, North Idaho, site development, land clearing, utility installation, hauling, roads, driveways, septic, foundations, drainage" />
   <meta name="theme-color" content="#0e0f11" />
   <!-- Open Graph (Facebook, texts, link previews) -->
   <meta property="og:type" content="website" />
@@ -38,6 +38,8 @@
       <nav class="nav" id="nav">
         <a href="#services" class="nav-link">Services</a>
         <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#area" class="nav-link">Service Area</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="tel:+12082906054" class="nav-cta">Call Now</a>
@@ -196,6 +198,59 @@
     </div>
   </section>
 
+  <!-- Reviews / Testimonials -->
+  <section class="section section-alt" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">What Our Customers Say</p>
+        <h2 class="section-title">Reviews</h2>
+        <p class="section-lead">Trusted by homeowners and builders across North Idaho.</p>
+      </div>
+
+      <!-- TODO: Replace the placeholder quotes/names below with real customer testimonials. -->
+      <div class="reviews-grid">
+        <figure class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;[Customer testimonial goes here &mdash; add a real review from a happy client.]&rdquo;</blockquote>
+          <figcaption>&mdash; [Customer Name], [Town]</figcaption>
+        </figure>
+        <figure class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;[Customer testimonial goes here &mdash; add a real review from a happy client.]&rdquo;</blockquote>
+          <figcaption>&mdash; [Customer Name], [Town]</figcaption>
+        </figure>
+        <figure class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>&ldquo;[Customer testimonial goes here &mdash; add a real review from a happy client.]&rdquo;</blockquote>
+          <figcaption>&mdash; [Customer Name], [Town]</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="section" id="area">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Where We Work</p>
+        <h2 class="section-title">Service Area</h2>
+        <p class="section-lead">Proudly serving Bonner County &amp; North Idaho, including:</p>
+      </div>
+
+      <ul class="area-list">
+        <li>Sandpoint</li>
+        <li>Ponderay</li>
+        <li>Sagle</li>
+        <li>Dover</li>
+        <li>Kootenai</li>
+        <li>Hope &amp; East Hope</li>
+        <li>Priest River</li>
+        <li>Bonners Ferry</li>
+      </ul>
+      <p class="area-note">Don't see your town? Give us a call &mdash; we may still be able to help.</p>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section class="section section-dark" id="contact">
     <div class="container contact-grid">
@@ -229,6 +284,42 @@
         </div>
       </div>
     </div>
+
+    <div class="container quote-form-wrap">
+      <h3 class="quote-form-title">Request Your Free On-Site Estimate</h3>
+      <p class="quote-form-sub">Fill out the form and we'll reach out to schedule a visit.</p>
+      <!--
+        TODO: Make this form actually send email.
+        1. Create a free account at https://formspree.io
+        2. Create a form and copy its endpoint (looks like https://formspree.io/f/abcdwxyz)
+        3. Replace YOUR_FORM_ID below with that ID.
+        Until then, the form validates but will not deliver messages.
+      -->
+      <form class="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" required placeholder="(208) 000-0000" />
+          </label>
+        </div>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" />
+        </label>
+        <label>
+          <span>Project Details</span>
+          <textarea name="message" rows="4" required placeholder="Tell us about your project, location, and timeline."></textarea>
+        </label>
+        <!-- Sends a copy to your inbox with a clear subject line -->
+        <input type="hidden" name="_subject" value="New quote request from D&amp;S Excavation website" />
+        <button type="submit" class="btn btn-primary">Send Request</button>
+        <p class="form-fallback">Prefer to talk? Call <a href="tel:+12082906054">(208) 290-6054</a> or email <a href="mailto:7bdirt@gmail.com">7bdirt@gmail.com</a>.</p>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
@@ -261,6 +352,9 @@
       <p class="footer-copy">&copy; <span id="year"></span> D&amp;S Excavation Inc &middot; Licensed, Bonded &amp; Insured. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Sticky mobile call bar (phones only) -->
+  <a href="tel:+12082906054" class="mobile-call-bar">&#128222; Call Now &middot; (208) 290-6054</a>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
