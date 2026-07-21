@@ -1,0 +1,6 @@
+# robots.txt for D&S Excavation Inc
+# SEO TODO: replace https://YOURDOMAIN.com with your real domain once registered.
+User-agent: *
+Allow: /
+
+Sitemap: https://YOURDOMAIN.com/sitemap.xml

@@ -36,6 +36,24 @@
     else img.addEventListener("load", markFilled);
   });
 
+  // Gallery "Show More" toggle (collapsed to first 6 tiles)
+  var galleryGrid = document.getElementById("galleryGrid");
+  var galleryToggle = document.getElementById("galleryToggle");
+  if (galleryGrid && galleryToggle) {
+    var VISIBLE_WHEN_COLLAPSED = 6;
+    // Only enable the toggle if there are more tiles than we show collapsed
+    if (galleryGrid.querySelectorAll(".gallery-item").length > VISIBLE_WHEN_COLLAPSED) {
+      galleryGrid.classList.add("collapsed");
+      galleryToggle.addEventListener("click", function () {
+        var collapsed = galleryGrid.classList.toggle("collapsed");
+        galleryToggle.textContent = collapsed ? "Show More" : "Show Less";
+        galleryToggle.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      });
+    } else {
+      galleryToggle.style.display = "none";
+    }
+  }
+
   // Lightbox
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightboxImg");
@@ -79,4 +97,51 @@
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") closeLightbox();
   });
+
+  // Star rating widget (review form)
+  var starRating = document.getElementById("starRating");
+  var ratingInput = document.getElementById("ratingInput");
+  if (starRating && ratingInput) {
+    var stars = Array.prototype.slice.call(starRating.querySelectorAll(".star-btn"));
+
+    function paint(value) {
+      stars.forEach(function (star) {
+        var v = parseInt(star.getAttribute("data-value"), 10);
+        star.classList.toggle("active", v <= value);
+      });
+    }
+
+    function setRating(value) {
+      ratingInput.value = value;
+      stars.forEach(function (star) {
+        var v = parseInt(star.getAttribute("data-value"), 10);
+        star.setAttribute("aria-checked", v === value ? "true" : "false");
+      });
+      paint(value);
+    }
+
+    stars.forEach(function (star) {
+      var v = parseInt(star.getAttribute("data-value"), 10);
+      star.addEventListener("click", function () { setRating(v); });
+      star.addEventListener("mouseenter", function () { paint(v); });
+      star.addEventListener("focus", function () { paint(v); });
+      star.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight" || e.key === "ArrowUp") {
+          e.preventDefault();
+          var next = Math.min(5, v + 1);
+          stars[next - 1].focus();
+          setRating(next);
+        } else if (e.key === "ArrowLeft" || e.key === "ArrowDown") {
+          e.preventDefault();
+          var prev = Math.max(1, v - 1);
+          stars[prev - 1].focus();
+          setRating(prev);
+        }
+      });
+    });
+
+    starRating.addEventListener("mouseleave", function () {
+      paint(parseInt(ratingInput.value, 10) || 0);
+    });
+  }
 })();

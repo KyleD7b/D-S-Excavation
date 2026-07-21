@@ -11,17 +11,76 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="D&amp;S Excavation Inc | Sandpoint &amp; North Idaho" />
   <meta property="og:description" content="Locally owned, licensed, bonded and insured excavation company serving Sandpoint and North Idaho. Free on-site estimates." />
-  <meta property="og:image" content="images/hero-banner.png" />
+  <meta property="og:image" content="images/stone-retaining-wall-lakefront-north-idaho.jpg" />
   <meta property="og:locale" content="en_US" />
+  <!-- SEO TODO: once you have a domain, set og:url + a canonical tag, e.g.
+       <meta property="og:url" content="https://YOURDOMAIN.com/" />
+       <link rel="canonical" href="https://YOURDOMAIN.com/" /> -->
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="D&amp;S Excavation Inc | Sandpoint &amp; North Idaho" />
   <meta name="twitter:description" content="Locally owned, licensed, bonded and insured excavation company serving Sandpoint and North Idaho. Free on-site estimates." />
-  <meta name="twitter:image" content="images/hero-banner.png" />
+  <meta name="twitter:image" content="images/stone-retaining-wall-lakefront-north-idaho.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data (LocalBusiness) for Google.
+       SEO TODO: replace https://YOURDOMAIN.com with your real domain once registered. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "D&S Excavation Inc",
+    "description": "Locally owned, licensed, bonded and insured excavation contractor in Sandpoint, serving Bonner County and North Idaho. Excavation, site development, land clearing, utility installation, hauling, roads, driveways, septic, foundations and drainage.",
+    "image": "https://YOURDOMAIN.com/images/stone-retaining-wall-lakefront-north-idaho.jpg",
+    "url": "https://YOURDOMAIN.com/",
+    "telephone": "+12082906054",
+    "email": "7bdirt@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sandpoint",
+      "addressRegion": "ID",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Sandpoint" },
+      { "@type": "City", "name": "Ponderay" },
+      { "@type": "City", "name": "Sagle" },
+      { "@type": "City", "name": "Dover" },
+      { "@type": "City", "name": "Kootenai" },
+      { "@type": "City", "name": "Hope" },
+      { "@type": "City", "name": "East Hope" },
+      { "@type": "City", "name": "Priest River" },
+      { "@type": "City", "name": "Bonners Ferry" },
+      { "@type": "AdministrativeArea", "name": "Bonner County, Idaho" },
+      { "@type": "AdministrativeArea", "name": "North Idaho" }
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59",
+      "description": "Call anytime \u2013 same-day response"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Excavation Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Excavation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site Development" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Land Clearing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Utility Installation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hauling" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Roads & Driveways" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Septic & Foundations" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ponds & Drainage" } }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Header / Nav -->
@@ -139,7 +198,6 @@
       </div>
       <div class="about-media">
         <img src="images/truck-1.jpg" alt="D&amp;S Excavation Inc wrapped work truck" loading="lazy" />
-        <img src="images/truck-2.jpg" alt="D&amp;S Excavation Inc work truck in the shop" loading="lazy" />
       </div>
     </div>
   </section>
@@ -153,47 +211,64 @@
         <p class="section-lead">A look at our rig and recent projects around North Idaho.</p>
       </div>
 
+      <!-- Photos are grouped by project and ordered start-to-finish.
+           Collapsed to the first 6 tiles until "Show More" is clicked (see script.js). -->
       <div class="gallery-grid" id="galleryGrid">
-        <!-- Real photos -->
-        <button class="gallery-item" data-full="images/truck-1.jpg" data-caption="D&amp;S Excavation wrapped work truck">
-          <img src="images/truck-1.jpg" alt="D&amp;S Excavation wrapped work truck" loading="lazy" />
+        <!-- Project A: grey modern lakehouse (excavation -> wall -> finished) -->
+        <button class="gallery-item" data-full="images/lakefront-hillside-excavation.jpg" data-caption="Lakefront hillside excavation and retaining-wall prep">
+          <img src="images/lakefront-hillside-excavation.jpg" alt="Lakefront hillside excavation and retaining-wall prep" loading="lazy" />
         </button>
-        <button class="gallery-item" data-full="images/truck-2.jpg" data-caption="D&amp;S Excavation work truck">
-          <img src="images/truck-2.jpg" alt="D&amp;S Excavation work truck" loading="lazy" />
+        <button class="gallery-item" data-full="images/block-retaining-wall-riprap-shoreline.jpg" data-caption="Stacked block retaining wall with riprap shoreline protection">
+          <img src="images/block-retaining-wall-riprap-shoreline.jpg" alt="Stacked block retaining wall with riprap shoreline protection" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-full="images/two-tier-retaining-wall-waterfront.jpg" data-caption="Two-tier stone retaining wall creating usable waterfront space">
+          <img src="images/two-tier-retaining-wall-waterfront.jpg" alt="Two-tier stone retaining wall creating usable waterfront space" loading="lazy" />
         </button>
 
-        <!-- Placeholder tiles: drop images/job-1.jpg ... job-6.jpg to fill.
-             Each tile auto-upgrades to a real photo when the file exists. -->
-        <button class="gallery-item is-placeholder" data-job="images/job-1.jpg" data-caption="Project photo">
-          <img src="images/job-1.jpg" alt="Past excavation project" loading="lazy"
-               onerror="this.closest('.gallery-item').classList.add('empty');" />
-          <span class="placeholder-label">Photo coming soon</span>
+        <!-- Project B: white stacked-stone lakefront (build -> finished -> steps) -->
+        <button class="gallery-item" data-full="images/curved-stone-retaining-wall-north-idaho.jpg" data-caption="Curved stone retaining wall and graded lakeside pad in North Idaho">
+          <img src="images/curved-stone-retaining-wall-north-idaho.jpg" alt="Curved stone retaining wall and graded lakeside pad in North Idaho" loading="lazy" />
         </button>
-        <button class="gallery-item is-placeholder" data-job="images/job-2.jpg" data-caption="Project photo">
-          <img src="images/job-2.jpg" alt="Past excavation project" loading="lazy"
-               onerror="this.closest('.gallery-item').classList.add('empty');" />
-          <span class="placeholder-label">Photo coming soon</span>
+        <button class="gallery-item" data-full="images/stone-retaining-wall-lakefront-north-idaho.jpg" data-caption="Multi-tier natural stone retaining wall on a North Idaho lakefront">
+          <img src="images/stone-retaining-wall-lakefront-north-idaho.jpg" alt="Multi-tier natural stone retaining wall on a North Idaho lakefront" loading="lazy" />
         </button>
-        <button class="gallery-item is-placeholder" data-job="images/job-3.jpg" data-caption="Project photo">
-          <img src="images/job-3.jpg" alt="Past excavation project" loading="lazy"
-               onerror="this.closest('.gallery-item').classList.add('empty');" />
-          <span class="placeholder-label">Photo coming soon</span>
+        <button class="gallery-item" data-full="images/granite-stone-steps-to-dock.jpg" data-caption="Granite stone steps leading down to the dock">
+          <img src="images/granite-stone-steps-to-dock.jpg" alt="Granite stone steps leading down to the dock" loading="lazy" />
         </button>
-        <button class="gallery-item is-placeholder" data-job="images/job-4.jpg" data-caption="Project photo">
-          <img src="images/job-4.jpg" alt="Past excavation project" loading="lazy"
-               onerror="this.closest('.gallery-item').classList.add('empty');" />
-          <span class="placeholder-label">Photo coming soon</span>
+
+        <!-- Project C: stone slab staircase + block wall (build -> finished) -->
+        <button class="gallery-item" data-full="images/stone-slab-staircase-construction.jpg" data-caption="Stone slab staircase construction with block-wall landing">
+          <img src="images/stone-slab-staircase-construction.jpg" alt="Stone slab staircase construction with block-wall landing" loading="lazy" />
         </button>
-        <button class="gallery-item is-placeholder" data-job="images/job-5.jpg" data-caption="Project photo">
-          <img src="images/job-5.jpg" alt="Past excavation project" loading="lazy"
-               onerror="this.closest('.gallery-item').classList.add('empty');" />
-          <span class="placeholder-label">Photo coming soon</span>
+        <button class="gallery-item" data-full="images/stone-retaining-wall-steps.jpg" data-caption="Stone retaining wall with concrete step access">
+          <img src="images/stone-retaining-wall-steps.jpg" alt="Stone retaining wall with concrete step access" loading="lazy" />
         </button>
-        <button class="gallery-item is-placeholder" data-job="images/job-6.jpg" data-caption="Project photo">
-          <img src="images/job-6.jpg" alt="Past excavation project" loading="lazy"
-               onerror="this.closest('.gallery-item').classList.add('empty');" />
-          <span class="placeholder-label">Photo coming soon</span>
+
+        <!-- Project D: log-cabin property retaining wall -->
+        <button class="gallery-item" data-full="images/retaining-wall-graded-lawn.jpg" data-caption="Block retaining wall with freshly graded and seeded lawn">
+          <img src="images/retaining-wall-graded-lawn.jpg" alt="Block retaining wall with freshly graded and seeded lawn" loading="lazy" />
         </button>
+
+        <!-- Other services -->
+        <button class="gallery-item" data-full="images/septic-system-installation-north-idaho.jpg" data-caption="Septic system installation with tanks and trenching in North Idaho">
+          <img src="images/septic-system-installation-north-idaho.jpg" alt="Septic system installation with tanks and trenching in North Idaho" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-full="images/drain-field-utility-installation.jpg" data-caption="Drain field and utility line installation">
+          <img src="images/drain-field-utility-installation.jpg" alt="Drain field and utility line installation" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-full="images/equipment-hauling-north-idaho.jpg" data-caption="Hauling heavy equipment to a North Idaho job site">
+          <img src="images/equipment-hauling-north-idaho.jpg" alt="Hauling heavy equipment to a North Idaho job site" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-full="images/gravel-driveway-entry-gate.jpg" data-caption="New gravel driveway with custom entry gate">
+          <img src="images/gravel-driveway-entry-gate.jpg" alt="New gravel driveway with custom entry gate" loading="lazy" />
+        </button>
+        <button class="gallery-item" data-full="images/finished-landscaping-flagstone-path.jpg" data-caption="Finished landscaping with flagstone path and planting beds">
+          <img src="images/finished-landscaping-flagstone-path.jpg" alt="Finished landscaping with flagstone path and planting beds" loading="lazy" />
+        </button>
+      </div>
+
+      <div class="gallery-toggle-wrap">
+        <button type="button" class="btn btn-ghost gallery-toggle" id="galleryToggle" aria-expanded="false" aria-controls="galleryGrid">Show More</button>
       </div>
     </div>
   </section>
@@ -207,23 +282,62 @@
         <p class="section-lead">Trusted by homeowners and builders across North Idaho.</p>
       </div>
 
-      <!-- TODO: Replace the placeholder quotes/names below with real customer testimonials. -->
-      <div class="reviews-grid">
+      <!--
+        Real customer reviews go here. When you receive a review through the form
+        below (it is emailed to you), paste it in as a new .review-card like this:
+
         <figure class="review-card">
           <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;[Customer testimonial goes here &mdash; add a real review from a happy client.]&rdquo;</blockquote>
-          <figcaption>&mdash; [Customer Name], [Town]</figcaption>
+          <blockquote>&ldquo;They did an amazing job on our retaining wall.&rdquo;</blockquote>
+          <figcaption>&mdash; Jane D., Sandpoint</figcaption>
         </figure>
-        <figure class="review-card">
-          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;[Customer testimonial goes here &mdash; add a real review from a happy client.]&rdquo;</blockquote>
-          <figcaption>&mdash; [Customer Name], [Town]</figcaption>
-        </figure>
-        <figure class="review-card">
-          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;[Customer testimonial goes here &mdash; add a real review from a happy client.]&rdquo;</blockquote>
-          <figcaption>&mdash; [Customer Name], [Town]</figcaption>
-        </figure>
+
+        Wrap your cards in <div class="reviews-grid"> ... </div>.
+      -->
+
+      <!-- Leave a Review form -->
+      <div class="review-form-wrap">
+        <h3 class="review-form-title">Leave Us a Review</h3>
+        <p class="review-form-sub">Worked with us? Let us know how we did &mdash; your feedback is sent straight to the owner.</p>
+        <!--
+          TODO: Make this form deliver reviews to your inbox.
+          1. Create a free account at https://formspree.io
+          2. Create a NEW form just for reviews and copy its endpoint (e.g. https://formspree.io/f/abcdwxyz)
+          3. Replace YOUR_REVIEW_FORM_ID below with that ID.
+          Until then, the form validates but will not deliver messages.
+        -->
+        <form class="review-form" action="https://formspree.io/f/YOUR_REVIEW_FORM_ID" method="POST">
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label>
+              <span>Town</span>
+              <input type="text" name="town" placeholder="e.g. Sandpoint" />
+            </label>
+          </div>
+
+          <div class="rating-field">
+            <span class="rating-label">Your Rating</span>
+            <div class="star-rating" id="starRating" role="radiogroup" aria-label="Star rating">
+              <button type="button" class="star-btn" data-value="1" role="radio" aria-checked="false" aria-label="1 star">&#9733;</button>
+              <button type="button" class="star-btn" data-value="2" role="radio" aria-checked="false" aria-label="2 stars">&#9733;</button>
+              <button type="button" class="star-btn" data-value="3" role="radio" aria-checked="false" aria-label="3 stars">&#9733;</button>
+              <button type="button" class="star-btn" data-value="4" role="radio" aria-checked="false" aria-label="4 stars">&#9733;</button>
+              <button type="button" class="star-btn" data-value="5" role="radio" aria-checked="false" aria-label="5 stars">&#9733;</button>
+            </div>
+            <input type="hidden" name="rating" id="ratingInput" value="" required />
+          </div>
+
+          <label>
+            <span>Your Review</span>
+            <textarea name="review" rows="4" required placeholder="Tell us about your experience working with D&amp;S Excavation."></textarea>
+          </label>
+          <input type="hidden" name="_subject" value="New review from D&amp;S Excavation website" />
+          <button type="submit" class="btn btn-primary">Submit Review</button>
+          <p class="form-fallback">Reviews are emailed to the owner and posted after a quick review.</p>
+        </form>
       </div>
     </div>
   </section>
@@ -291,11 +405,12 @@
       <!--
         TODO: Make this form actually send email.
         1. Create a free account at https://formspree.io
-        2. Create a form and copy its endpoint (looks like https://formspree.io/f/abcdwxyz)
-        3. Replace YOUR_FORM_ID below with that ID.
+        2. Create a form for QUOTE requests and copy its endpoint (e.g. https://formspree.io/f/abcdwxyz)
+        3. Replace YOUR_QUOTE_FORM_ID below with that ID.
+        (Use a SEPARATE Formspree form for reviews - see the Reviews section above.)
         Until then, the form validates but will not deliver messages.
       -->
-      <form class="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form class="quote-form" action="https://formspree.io/f/YOUR_QUOTE_FORM_ID" method="POST">
         <div class="form-row">
           <label>
             <span>Name</span>
