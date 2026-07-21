@@ -67,7 +67,6 @@ to include real towns (e.g. "retaining wall in Sagle") for better local search.
 
 ## Contact
 
-- Joe Donker — (208) 290-6054
-- Kyle Donker — (208) 304-3295
+- (208) 290-6054
 - 7bdirt@gmail.com
 - Serving Sandpoint & North Idaho
